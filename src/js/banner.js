@@ -97,6 +97,7 @@ window.onload = function(){
 	});*/
 	$("#btns li").mouseover(function(){
 		clearInterval(myTimer);
+		console.log(1)
 		$("#box1 img").eq(ord).stop(true,true);
 		let index = $("#btns li").index(this);
 		showImg(ord,index);//showImg(2,4);		
