@@ -1,0 +1,1 @@
+"use strict";$(function(){$(".box").on("mouseenter",function(){$(".nav_right").removeClass("hide")}).on("mouseleave",function(){$(".nav_right").addClass("hide"),$(".sub").addClass("hide")}).on("mouseenter","li",function(e){var s=$(this).attr("data-id");$(".sub").addClass("hide"),$('.sub[data-id="'+s+'"]').removeClass("hide")})});
