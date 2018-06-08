@@ -7,7 +7,7 @@ let myTimer =null;
 //初始化界面的函数
 function initUI(){
 	$("#btns li:first").css({"background-color":"red"});	
-	$("#box img").slice(1).css({"left":"1200px"});
+	$("#box1 img").slice(1).css({"left":"1200px"});
 }
 
 //动态改变图片
@@ -47,19 +47,19 @@ function fadeInOut(outOrd,inOrd){//2,4
 		return;
 	}
 //	
-	$("#box img").eq(outOrd).css({
+	$("#box1 img").eq(outOrd).css({
 		"left":"0px"
 	});
 	
-	$("#box img").eq(inOrd).css({
+	$("#box1 img").eq(inOrd).css({
 		"left":"1200px"
 	});
 	
-	$("#box img").eq(outOrd).animate({
+	$("#box1 img").eq(outOrd).animate({
 		"left":"-1200px"
 	},2000);
 	
-	$("#box img").eq(inOrd).animate({
+	$("#box1 img").eq(inOrd).animate({
 		"left":"0px"
 	},2000);
 }
@@ -77,17 +77,29 @@ window.onload = function(){
 	changeImg();
 	
 	$("#box1").mouseover(function(){
+		/*$("#box1").css("z-index","1");
+		$(".box").css("z-index","0");*/
 		clearInterval(myTimer);
 	});
 	
 	$("#box1").mouseout(function(){
+		/*$("#box1").css("z-index","0");
+		$(".box").css("z-index","1");*/
 		changeImg();
 	});
-	
-	$("#btns li").click(function(){
+	/*$(".box").mouseout(function(){
+		$(".box").css("z-index","1");
+		$("#box1").css("z-index","0");
+	});
+	$(".box").mouseout(function(){
+		$(".box").css("z-index","0");
+		$("#box1").css("z-index","1");
+	});*/
+	$("#btns li").mouseover(function(){
 		clearInterval(myTimer);
-		$("#box img").eq(ord).stop(true,true);
+		$("#box1 img").eq(ord).stop(true,true);
 		let index = $("#btns li").index(this);
 		showImg(ord,index);//showImg(2,4);		
 	});
+
 }
