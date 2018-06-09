@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,p,ol,ul,li,dl,dt,dd,form,table,tr,td,hr,h1,h2,h3,h4,h5,h6,fieldset,img,input,figure{
+	margin:0;
+	padding:0;
+}
+a{
+	text-decoration: none;
+}
+ul,ol{
+	list-style: none;
+}
+img{
+	border: none;
+	display: block;
+}
+body{
+	background-color: #fafafa;
+}
+//头部
+.head{
+	width: 100%;
+	height: 36px;
+	background: #f7f7f7;
+	border-bottom:1px solid #ede9eb;
+}
+.header{
+	width:1200px;
+	height:36px;
+	margin: 0 auto;
+	overflow: hidden;
+	a{
+		padding:0 11px;
+		font-size:12px;
+		line-height:36px;
+	}
+}
+.header_left{
+	float: left;
+	a{
+		color:#fe8500;
+	}
+	a:first-child{
+		border-right:1px solid orange;
+	}
+}
+.header_right{
+	float: right;
+	a{
+		color:#747474;
+		border-right:1px solid #ede9eb;
+	}
+	a:last-child{
+		border-right: none;
+	}
+}
+.logoinhead{
+	width: 100%;
+	height: 90px;
+	.logoin{
+		float: left;
+		width: 227px;
+	}
+	span{
+		font-size: 26px;
+		line-height: 90px;
+		color: #747474;
+		float: left;
+	}
+}
+.content{
+	width: 980px;
+	height: 700px;
+	margin: 30px auto;
+	text-align: center;
+	.content_a{
+		display: block;
+		width: 142px;
+		color: #2daae4;
+		line-height: 42px;
+		border: 1px solid #e8e8e8;
+		border-bottom: none;
+		border-top: 2px solid #2daae4;
+		background-color: white;
+	}
+	.register{
+		background-color: white;
+		padding: 55px 0 40px 120px;
+		p{
+			width: 352px;
+			height: 70px;
+			overflow: hidden;
+			label{
+				float: left;
+				width: 60px;
+				font-size: 12px;
+				text-align: right;
+				padding-top: 10px;
+			}
+			input{
+				margin-left: 15px;
+				float: left;
+				width: 272px;
+				height: 35px;
+			}
+			a{
+				font-size: 12px;
+				color: #747474;
+				line-height: 70px;
+			}
+		}
+		/* &:last-child{
+			padding-left: 90px;
+		} */
+	}
+}
+#check{
+	width: 15px;
+	height: 15px;
+	margin-top: 28px;
+    margin-left: 90px;
+}
+//footer
+.footer{
+	width: 100%;
+	.footer_B{
+		width: 1200px;
+		height: 150px;
+		background-color: #fdfdfd;
+		margin: 0 auto;
+	}
+	.footer_C{
+		width: 1200px;
+		height: 140px;
+		padding-top: 45px;
+		background-color: #f5f5f7;
+		margin: 0 auto;
+		p{
+			line-height: 24px;
+			text-align: center;
+			font-size: 12px;
+			color: #747474;
+			img{
+				float: left;
+				height: 29px;
+			}
+		}
+		p:last-child{
+			width: 171px;
+			margin: 0 auto;
+		}
+	}
+}

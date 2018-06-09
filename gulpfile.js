@@ -13,7 +13,7 @@ var babel = require('gulp-babel');
 
 //定义一个复制文件的任务（命令）
 gulp.task("copyfile",function(){
-	return gulp.src("index.html")
+	return gulp.src("*.html")
 	.pipe(gulp.dest("./dist/"));
 });
 
@@ -47,7 +47,15 @@ gulp.task('default',['minifyCss'],function(){
 	gulp.watch(['./src/scss/*.scss','./src/js/*.js','./*.html'],['fresh']);
 
 	connect.server({
-		port:8081,
-		livereload:true
+		// port:8081,
+		// livereload:true
+		"root":"dist"
 	})
 })
+
+//简易的web服务器
+/*gulp.task("server",function(){
+	connect.server({
+		"root":"dist"
+	});
+});*/
