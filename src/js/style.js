@@ -9,6 +9,18 @@ $(function() {
 		$(".sub").addClass('hide');
 		$('.sub[data-id="' + li_data + '"]').removeClass('hide');
 	})
+	$(".aa1").click(function(){
+		$(".aa1").css("background-color","rgba(0,0,255,0.3)");
+		$(".aa2").css("background-color","white");
+		$(".uls1").show();
+		$(".uls2").hide();
+	})
+	$(".aa2").click(function(){
+		$(".aa2").css("background-color","rgba(0,0,255,0.3)");
+		$(".aa1").css("background-color","white");
+		$(".uls2").show();
+		$(".uls1").hide();
+	});
 })
 
 
