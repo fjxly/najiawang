@@ -5,6 +5,9 @@ body,div,p,ol,ul,li,dl,dt,dd,form,table,tr,td,hr,h1,h2,h3,h4,h5,h6,fieldset,img,
 	margin:0;
 	padding:0;
 }
+body{
+  font-family: "Microsoft YaHei",Arial;
+}
 a{
 	text-decoration: none;
 }
@@ -51,6 +54,9 @@ body{
 		color:#747474;
 		border-right:1px solid #ede9eb;
 	}
+	a:hover{
+		color:#fe8500;
+	}
 	a:last-child{
 		border-right: none;
 	}
@@ -88,38 +94,52 @@ body{
 		background-color: white;
 		padding: 55px 0 40px 120px;
 		p{
-			width: 352px;
+			width: 370px;
 			height: 70px;
 			overflow: hidden;
 			label{
 				float: left;
 				width: 60px;
 				font-size: 12px;
+				color: #6d7b6e;
 				text-align: right;
 				padding-top: 10px;
 			}
 			input{
 				margin-left: 15px;
 				float: left;
-				width: 272px;
+				width: 273px;
 				height: 35px;
+				color: #6d7b6e;
+				padding-left: 15px;
+				border-radius: 2px;
+				border: 1px solid #e8e8e8;
 			}
 			a{
 				font-size: 12px;
 				color: #747474;
 				line-height: 70px;
 			}
+			a:hover{
+				color:#fe8500;
+			}
 		}
-		/* &:last-child{
-			padding-left: 90px;
-		} */
 	}
 }
 #check{
 	width: 15px;
 	height: 15px;
 	margin-top: 28px;
-    margin-left: 90px;
+    margin-left: 70px;
+}
+#btn{
+	width: 275px;
+	height: 35px;
+	margin-left: 70px;
+	font-size: 18px;
+	color: white;
+	background-color: #fe8500;
+	border: none;
 }
 //footer
 .footer{

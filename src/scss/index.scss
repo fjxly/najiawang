@@ -5,6 +5,9 @@ body,div,p,ol,ul,li,dl,dt,dd,form,table,tr,td,hr,h1,h2,h3,h4,h5,h6,fieldset,img,
 	margin:0;
 	padding:0;
 }
+body{
+  font-family: "Microsoft YaHei",Arial;
+}
 a{
 	text-decoration: none;
 }
@@ -47,6 +50,9 @@ img{
 	a{
 		color:#747474;
 		border-right:1px solid #ede9eb;
+	}
+	a:hover{
+		color:#fe8500;
 	}
 	a:last-child{
 		border-right: none;
@@ -182,6 +188,7 @@ img{
 				padding: 15px 36px;
 				color: black;
 				font-size: 14px;
+				font-weight: 700;
 			}
 		}
 	}
@@ -408,7 +415,7 @@ img{
 	height: 205px;
 	position: absolute;
 	top: 225px;
-	right: 0;
+	right: 1px;
 }
 .uls2{
 	display: none;

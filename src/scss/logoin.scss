@@ -5,6 +5,9 @@ body,div,p,ol,ul,li,dl,dt,dd,form,table,tr,td,hr,h1,h2,h3,h4,h5,h6,fieldset,img,
 	margin:0;
 	padding:0;
 }
+body{
+  font-family: "Microsoft YaHei",Arial;
+}
 a{
 	text-decoration: none;
 }
@@ -50,6 +53,9 @@ body{
 	a{
 		color:#747474;
 		border-right:1px solid #ede9eb;
+	}
+	a:hover{
+		color:#fe8500;
 	}
 	a:last-child{
 		border-right: none;
@@ -97,6 +103,15 @@ body{
 				height: 36px;
 				color: #9c9c9c;
 				padding-left:15px; 
+				border-radius: 2px;
+				border: 1px solid #e8e8e8;
+			}
+			a{
+				color:#fe8500;
+				font-size: 12px;
+			}
+			a:nth-child(1){
+				margin-right: 190px;
 			}
 		}
 	}
@@ -108,22 +123,12 @@ body{
 	font-size: 18px;
 	color: white;
 }
+#btn:hover{
+	background-color: #39a3f6;
+}
 //footer
 .footer{
 	width: 100%;
-	.footer_A{
-		width: 1200px;
-		margin: 30px auto;
-		overflow: hidden;
-		a{
-			float: left;
-		    border-right: 1px solid #dedede;
-		    padding: 0 25px;
-		    &:last-child{
-		    	border-right: none;
-		    }
-		}
-	}
 	.footer_B{
 		width: 1200px;
 		height: 150px;

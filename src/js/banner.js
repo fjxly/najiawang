@@ -1,5 +1,5 @@
 let imgs = ["../img/banner1.jpg","../img/banner2.jpg","../img/banner3.png","../img/banner4.jpg","../img/banner5.jpg"];
-let hrefs = ["http://www.baidu.com","http://www.1000phone.com","http://www.taobao.com","http://www.jd.com","http://www.4399.com"];
+let hrefs = ["details.html","http://www.1000phone.com","http://www.taobao.com","http://www.jd.com","http://www.4399.com"];
 let ord = 0;//表示下标
 let myTimer =null; 
 //let fadeTimer=null;//淡入淡出效果的定时器；
