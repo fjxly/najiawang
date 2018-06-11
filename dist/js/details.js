@@ -1,1 +1,102 @@
-"use strict";$(function(){var t=$("#small-box")[0],e=Array.from(t.children),o=$("#middle-img")[0],a=$("#large-img")[0],c=$("#middle-box")[0],d=$("#large-box")[0],p=$("#shadow")[0],r=$("#enlaBox")[0];$(".content")[0];e.forEach(function(t){t.onmouseover=function(){e.forEach(function(t){return t.classList.remove("active")}),this.classList.add("active"),o.src=this.src,a.src=this.src}}),c.onmouseover=function(){d.style.display="block",p.style.display="block"},c.onmouseout=function(){d.style.display="none",p.style.display="none"};var u=c.offsetWidth-p.offsetWidth,h=c.offsetHeight-p.offsetHeight;c.onmousemove=function(t){var e=a.offsetWidth-d.offsetWidth,o=a.offsetHeight-d.offsetHeight,s=t||window.event,i=s.pageX-p.offsetWidth/2-c.offsetLeft-r.offsetLeft,n=s.pageY-p.offsetHeight/2-c.offsetTop-r.offsetTop;n<0&&(n=0),i<0&&(i=0),u<i&&(i=u),h<n&&(n=h),p.style.left=i+"px",p.style.top=n+"px";var f=i*e/u,l=n*o/h;a.style.left=-f+"px",a.style.top=-l+"px"},$("dl").on("click","dt",function(){$(this).siblings().slideToggle(1e3)}),$(".info p input").click(function(){$(".section01_right").append('<div class="mesige"></div>'),$(".mesige").html('\n\t\t\t\t<span>咨询内容：</span><textarea name="" id="txte" cols="100" rows="10"></textarea>\n\t\t\t\t<p></p>\n\t\t\t\t<input type="submit" value="提交" id="btn"/>'),$("#btn").click(function(){$("<li>").html($("#txte").val()).appendTo(".info .infoul")})})});
+'use strict';
+
+$(function () {
+	var smallBox = $('#small-box')[0];
+	var smallImg = Array.from(smallBox.children);
+	var middleImg = $('#middle-img')[0];
+	var largeImg = $('#large-img')[0];
+	var middleBox = $('#middle-box')[0];
+	var largeBox = $('#large-box')[0];
+	var shadow = $('#shadow')[0];
+	var enlaBox = $('#enlaBox')[0];
+	var content = $('.content')[0];
+
+	// 缩略图图片切换
+	smallImg.forEach(function (v) {
+		v.onmouseover = function () {
+			// 去掉所有的class名
+			smallImg.forEach(function (n) {
+				return n.classList.remove('active');
+			});
+			// 当前img添加class名
+			this.classList.add('active');
+
+			// 切换中型图片和大型图片的src地址
+			middleImg.src = this.src;
+			largeImg.src = this.src;
+		};
+	});
+
+	// 放大镜效果
+	middleBox.onmouseover = function () {
+		largeBox.style.display = 'block';
+		shadow.style.display = 'block';
+	};
+
+	middleBox.onmouseout = function () {
+		largeBox.style.display = 'none';
+		shadow.style.display = 'none';
+	};
+
+	// 遮罩层最大可移动的距离
+	var maxL = middleBox.offsetWidth - shadow.offsetWidth;
+	var maxT = middleBox.offsetHeight - shadow.offsetHeight;
+
+	middleBox.onmousemove = function (ev) {
+		// 大图片最大可移动的距离
+		var largeImgMaxL = largeImg.offsetWidth - largeBox.offsetWidth;
+		var largeImgMaxT = largeImg.offsetHeight - largeBox.offsetHeight;
+
+		var e = ev || window.event;
+
+		var L = e.pageX - shadow.offsetWidth / 2 - middleBox.offsetLeft - enlaBox.offsetLeft;
+		var T = e.pageY - shadow.offsetHeight / 2 - middleBox.offsetTop - enlaBox.offsetTop;
+
+		// 上侧边界
+		if (T < 0) {
+			T = 0;
+		}
+
+		// 左侧边界
+		if (L < 0) {
+			L = 0;
+		}
+
+		// 右侧边界
+		if (L > maxL) {
+			L = maxL;
+		}
+		// 下侧边界
+		if (T > maxT) {
+			T = maxT;
+		}
+
+		// 移动遮罩层
+		shadow.style.left = L + 'px';
+		shadow.style.top = T + 'px';
+
+		// 移动右侧大图
+		// shadowCurL / largeImgCurL = shadowMaxL / largeImgMaxL
+
+		var largeImgL = L * largeImgMaxL / maxL;
+		var largeImgT = T * largeImgMaxT / maxT;
+
+		largeImg.style.left = -largeImgL + 'px';
+		largeImg.style.top = -largeImgT + 'px';
+	};
+
+	//折叠菜单
+	$("dl").on("click", "dt", function () {
+		$(this).siblings().slideToggle(1000);
+	});
+
+	//资讯窗口
+
+	$(".info p input").click(function () {
+		$(".section01_right").append('<div class="mesige"></div>');
+		$(".mesige").html('\n\t\t\t\t<span>\u54A8\u8BE2\u5185\u5BB9\uFF1A</span><textarea name="" id="txte" cols="100" rows="10"></textarea>\n\t\t\t\t<p></p>\n\t\t\t\t<input type="submit" value="\u63D0\u4EA4" id="btn"/>');
+		$("#btn").click(function () {
+			$("<li>").html($("#txte").val()).appendTo(".info .infoul");
+		});
+	});
+});

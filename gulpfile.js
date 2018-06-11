@@ -26,14 +26,14 @@ gulp.task("images",function(){
 gulp.task('minifyCss',function(){
 	return gulp.src('./src/scss/*.scss')
 	.pipe(sass())
-	.pipe(minifyCss())
+	// .pipe(minifyCss())
 	.pipe(gulp.dest('./dist/css/'));
 })
 //执行并压缩js文件
 gulp.task('minifyJs',function(){
 	return gulp.src('./src/js/*.js')
 	.pipe(babel())
-	.pipe(minifyJs())
+	// .pipe(minifyJs())
 	.pipe(gulp.dest('./dist/js/'));
 })
 
