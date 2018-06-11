@@ -1,0 +1,1 @@
+"use strict";$(function(){$("dl").on("click","dt",function(){$(this).siblings().slideToggle(1e3)})});

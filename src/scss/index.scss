@@ -18,6 +18,44 @@ img{
 	border: none;
 	display: block;
 }
+//楼层效果
+.aside{
+	width: 60px;
+	position: fixed;
+	display: none;
+	right: 5px;
+	bottom: 100px;
+	a{
+		display: block;
+		width: 60px;
+		line-height: 30px;
+		text-align: center;
+		border: 1px solid #e8e8e8;
+	}
+	span{
+		width: 60px;
+		font-size: 12px;
+		line-height: 30px;
+		color: #ea5f8d;
+	}
+}
+a:hover{
+	border-color: #ea5f8d;
+}
+.shows{
+	display: block;
+}
+.hidens{
+	display: none;
+}
+a:hover .shows{
+	display: none;
+}
+a:hover .hidens{
+	display: block;
+	border-color: #ea5f8d;
+	background-color:  #fdafbd;
+}
 //头部
 .head{
 	width: 100%;
@@ -373,6 +411,7 @@ img{
 			text-align: center;
 			line-height: 32px;
 			border: 1px solid #e8e8e8;
+			border-bottom: none;
 			border-top: none;
 			float: left;
 		}
@@ -429,9 +468,10 @@ img{
 		}
 	}
 }
-.box2 .aa1{
-	background-color: rgba(0,0,255,0.3);
-}
+.box2 .aa2{
+ 	background-color: #f9f9f9;
+ 	border-bottom: 1px solid #e8e8e8;
+ } 
 //主题购
 .them{
 	width: 100%;

@@ -1,5 +1,4 @@
 
-
 $(function(){
 	let smallBox = $('#small-box')[0];
 	let smallImg = Array.from( smallBox.children );
@@ -84,4 +83,23 @@ $(function(){
 		largeImg.style.left = -largeImgL + 'px';
 		largeImg.style.top  = -largeImgT + 'px';
 	};
+
+	//折叠菜单
+	$("dl").on("click","dt",function(){
+		$(this).siblings().slideToggle(1000);
+	})
+	
+	//资讯窗口
+
+	$(".info p input").click(function(){
+		$(".section01_right").append('<div class="mesige"></div>');
+		$(".mesige").html(`
+				<span>咨询内容：</span><textarea name="" id="txte" cols="100" rows="10"></textarea>
+				<p></p>
+				<input type="submit" value="提交" id="btn"/>`);
+		$("#btn").click(function(){
+			$("<li>").html($("#txte").val()).appendTo(".info .infoul");
+		});
+	});
+	
 })
