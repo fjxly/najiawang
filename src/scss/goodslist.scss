@@ -403,7 +403,7 @@ img{
 	height: 34px;
 	background-color: #fafafa;
 	border: 1px solid #dfdfdf;
-	margin: 10px 0;
+	margin-top: 10px;
 	a{
 		display: inline-block;
 		width: 104px;
@@ -422,6 +422,128 @@ img{
 	a:hover{
 		background-color: #fe8500;
 		color: white;
+	}
+}
+.goodslist{
+	overflow: hidden;
+	width: 980px;
+	margin-top: 10px;
+	.goods:nth-child(4n+1){
+		margin-left: 2px;
+	}
+}
+.goods{
+	width: 220px;
+	height: 405px;
+	padding: 10px;
+	margin: 2px 0;
+	border-top: 1px dashed #e8e8e8;
+	float: left;
+	p{
+		width: 220px;
+		line-height: 24px;
+		color: #72756c;
+		font-size: 12px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow:ellipsis;
+		a{
+			font-size: 12px;
+			color: #72756c;
+		}
+		a:hover{
+			color: #fc8703;
+		}
+	}
+	.imgs{
+		width: 220px;
+		text-align: center;
+		img{
+			width: 220px;
+			height: 260px;
+		}
+	}
+	#imgs{
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: 75px;
+	}
+	.aps{
+		margin-top: 18px;
+	}
+	.title{
+		width: 220px;
+	}
+	.classific{
+		width: 80px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow:ellipsis;
+	}
+	.price{
+		font-size: 16px;
+		color: #fc8703;
+	}
+	.num{
+		font-weight: 700;
+		color: red;
+	}
+	.eval{
+		display: inline-block;
+		background-image: url(../img/basic_icon.png);
+		background-position: -6px 106px;
+		width: 80px;
+		height: 22px;
+	}
+	.car{
+		margin-left: 10px;
+		color: #26a8dc;
+	}
+}
+.goods:nth-child(1){
+	border-top: none;
+}
+.goods:nth-child(2){
+	border-top: none;
+}
+.goods:nth-child(3){
+	border-top: none;
+}
+.goods:nth-child(4){
+	border-top: none;
+}
+.goods:hover{
+	box-shadow: 0 0 5px gray;
+	border-top: none;
+}
+
+.page{
+	line-height: 40px;
+	text-align: right;
+	font-size: 12px;
+	margin: 20px 10px;
+	a{
+		color: #d1ccc3;
+		font-size: 12px;
+		padding: 10px;
+		border: 1px solid #d1ccc3;
+	}
+	a:nth-child(3){
+		background-color: #2eabe5;
+		color: white;
+	}
+	a:last-child{
+		border: none;
+		color: #fd8b05;
+	}
+	a:hover{
+		color: #fb8300;
+	}
+	input{
+		width: 30px;
+		height: 30px;
+		outline: none;
+		border: 1px solid #d1ccc3;
 	}
 }
 //footer
