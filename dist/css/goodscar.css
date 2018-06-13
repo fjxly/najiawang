@@ -167,11 +167,26 @@ img {
   font-size: 12px;
   line-height: 50px; }
   .settle p:nth-child(1) {
-    float: left; }
+    float: left;
+    margin-left: 25px; }
+    .settle p:nth-child(1) input {
+      vertical-align: middle;
+      margin-right: 5px; }
   .settle p:nth-child(2) {
-    float: right; }
+    float: right;
+    margin-right: 25px; }
     .settle p:nth-child(2) span {
-      color: red; }
+      color: red;
+      font-size: 16px; }
+    .settle p:nth-child(2) input {
+      width: 125px;
+      height: 45px;
+      border: none;
+      vertical-align: middle;
+      margin-left: 10px;
+      color: white;
+      font-size: 18px;
+      background-color: #fe8500; }
 
 .footer {
   width: 100%; }
