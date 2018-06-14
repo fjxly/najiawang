@@ -73,6 +73,10 @@ a{
 	border-top-right-radius: 0.08rem;
 	border-bottom-right-radius: 0.08rem;
 }
+.swiper-container {
+    width: 3.75rem;
+    height: 1.45rem;
+} 
 .head3 img{
 	display: block;
 	height: 1.45rem;
@@ -199,4 +203,7 @@ section{
 	width: 0.24rem;
 	height: 0.22rem;
 	margin: 0 auto;
+}
+.bottom_A:hover span{
+	color:red;
 }

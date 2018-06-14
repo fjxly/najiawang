@@ -1,7 +1,21 @@
-window.onload = function(){	
-	let hrefs = ["http://www.baidu.com","http://www.1000phone.com","http://www.taobao.com","http://www.jd.com","http://www.4399.com"];
-	let imgs = ["img/1.png","img/2.png","img/3.png","img/4.png","img/5.jpg"];
-	//boxDom,width,height,imgs,hrefs,timeSpace
-	let box = $(".head3")[0];
-	new Slider(box,3.75,1.45, imgs,hrefs,2000);
-}
+var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    
+    // 如果需要分页器
+    pagination: {
+      el: '.swiper-pagination',
+    },
+    
+    // 如果需要前进后退按钮
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    autoplay: {
+    delay: 3000,
+    stopOnLastSlide: false,
+    disableOnInteraction: true,
+    },
+   
+  })        

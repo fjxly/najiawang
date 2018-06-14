@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <title>卷皮</title>
+<link rel="stylesheet" href="css/swiper-4.3.2.min.css">
 <link rel="stylesheet" type="text/css" href="css/juanpi.css">
 </head>
 <body>
@@ -17,7 +18,22 @@
 			<span>卷皮</span><input type="text" value="搜索"><img src="img/head2_01.jpg" >
 		</div>
 		<div class="head3">
-			<img src="img/head3_01.jpg" alt="">
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="img/1.png" alt=""></div>
+			        <div class="swiper-slide"><img src="img/2.png" alt=""></div>
+			        <div class="swiper-slide"><img src="img/3.png" alt=""></div>
+			        <div class="swiper-slide"><img src="img/4.png" alt=""></div>
+			        <div class="swiper-slide"><img src="img/5.jpg" alt=""></div>
+			        <div class="swiper-slide"><img src="img/6.png" alt=""></div>
+			    </div>
+			    <!-- 如果需要分页器 -->
+			    <div class="swiper-pagination"></div>
+			    
+			    <!-- 如果需要导航按钮 -->
+			    <div class="swiper-button-prev"></div>
+			    <div class="swiper-button-next"></div>
+			</div>
 		</div>
 	</header>
 	<section>
@@ -72,6 +88,6 @@
 	</footer>
 </body>
 </html>
-<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+<script type="text/javascript" src="js/swiper-4.3.2.min.js"></script>
 <script type="text/javascript" src="js/Slider.js"></script>
 <script type="text/javascript" src="js/juanpi.js"></script>
